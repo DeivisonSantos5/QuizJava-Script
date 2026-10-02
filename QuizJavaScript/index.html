@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz de JavaScript</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <section id="tela-inicial" class="screen">
+        <h1 class="titulo-principal">Quiz de JavaScript</h1>
+        <p class="subtitulo">
+          Responda as perguntas e descubra em qual posição no ranking de
+          inteligência você está!
+        </p>
+        <div class="input-group">
+          <input type="text" id="input-nome" placeholder="Nome" autocomplete="off"/>
+          <button id="btn-iniciar" class="btn-amarelo">Iniciar</button>
+        </div>
+      </section>
+
+      <section id="tela-jogo" class="screen hidden">
+        <header class="quiz-header">
+          <div class="status-box">
+            <span>Pontuação</span>
+            <span id="valor-pontuacao" class="status-valor">0</span>
+          </div>
+          <div class="status-box">
+            <span>Tempo</span>
+            <span id="valor-tempo" class="status-valor">30s</span>
+          </div>
+        </header>
+
+        <h2 id="texto-pergunta">Pergunta?</h2>
+
+        <div class="alternativas-grid" id="container-alternativas">
+          <button class="btn-resposta" data-index="0">Resposta 1</button>
+          <button class="btn-resposta" data-index="1">Resposta 2</button>
+          <button class="btn-resposta" data-index="2">Resposta 3</button>
+          <button class="btn-resposta" data-index="3">Resposta 4</button>
+        </div>
+
+        <footer class="quiz-footer">
+          <button id="btn-proximo-pergunta" class="btn-amarelo" onclick="proximo()">Próximo</button>
+        </footer>
+      </section>
+
+      <section id="tela-resultado" class="screen hidden">
+        <h1 class="titulo-principal">Parabéns!</h1>
+        <p class="subtitulo-resultado">Sua nota foi:</p>
+        <h2 id="nota-final">0</h2>
+        <div class="footer-direita">
+          <button id="btn-ir-ranking" class="btn-amarelo">Próximo</button>
+        </div>
+      </section>
+
+      <section id="tela-ranking" class="screen hidden">
+
+    <h1 class="titulo-principal">Ranking</h1>
+
+    <div class="ranking-grid" id="lista-ranking">
+    </div>
+
+    <div class="footer-direita">
+
+        <button id="btn-reiniciar" class="btn-amarelo">
+            Próximo
+        </button>
+
+    </div>
+
+</section>
+    </main>
+  </body>
+</html>
